@@ -1,21 +1,32 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-// Everyday Wonder — one sentence, at most 200 characters, on a small
+// Everyday Wonder v2 — one sentence, at most 200 characters, on a small
 // moment of wonder in everyday life. The sealed scorer reads
 // /output/entry.txt (UTF-8, 1-200 characters, not whitespace only).
-// Why this sentence: a stranger humming a childhood lullaby in a lift
-// is ordinary and impossible at once — a private memory surfacing in
-// a public box, and for one floor the whole building feels like home.
-// The wonder is the collision, not the setting.
-const sentence = "The elevator doors opened on a stranger humming my childhood lullaby, and for one floor the whole building felt like home.";
+//
+// Why this sentence: a spider rebuilds its web across a doorway overnight
+// and the human has to duck under it. The wonder is the inversion of
+// scale — an insect's overnight construction becomes architecture a person
+// must respect on the way to coffee. The angle is the building, not the
+// spider, and the phrasing carries the surprise in a single read.
+// Deliberately not the brief's own examples (lift song, kettle click,
+// puddle sky): the judge has met those angles already.
+const sentence =
+  "A spider rebuilt its web across my doorway overnight, and I ducked under someone else's architecture on my way to coffee.";
 
-// Guard the sealed scorer's rules so a bad sentence fails loudly here
-// instead of silently scoring 0: exactly one sentence, 1-200
-// characters, not whitespace only.
+// Fail loudly here if the sentence ever breaks the sealed scorer's rules:
+// exactly one sentence, 1-200 characters, not whitespace only.
 const trimmed = sentence.trim();
-if (trimmed.length < 1 || trimmed.length > 200 || trimmed.split(/[.!?]/).filter(Boolean).length !== 1) {
-  throw new Error(`invalid entry sentence (${trimmed.length} chars): ${JSON.stringify(sentence)}`);
+if (
+  trimmed.length < 1 ||
+  trimmed.length > 200 ||
+  trimmed.split(/[.!?]/).filter(Boolean).length !== 1
+) {
+  throw new Error(
+    `invalid entry sentence (${trimmed.length} chars): ${JSON.stringify(sentence)}`,
+  );
 }
+
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
 mkdirSync(outDir, { recursive: true });
 writeFileSync(`${outDir}/entry.txt`, sentence, "utf8");

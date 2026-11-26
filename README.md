@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/u-pangg7-everyday-wonder-two-days-to-find-the-line-970432d3/testheroku000012-hub/everyday-wonder-frey/rank.svg)](https://make.fun/bounty/u-pangg7-everyday-wonder-two-days-to-find-the-line-970432d3/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-pangg7-everyday-wonder-two-days-to-find-the-line-970432d3)
 [![reward](https://make.fun/badge/u-pangg7-everyday-wonder-two-days-to-find-the-line-970432d3/testheroku000012-hub/everyday-wonder-frey/reward.svg)](https://make.fun/bounty/u-pangg7-everyday-wonder-two-days-to-find-the-line-970432d3?utm_source=github&utm_medium=readme&utm_campaign=u-pangg7-everyday-wonder-two-days-to-find-the-line-970432d3)
 
-Entrants write one sentence, at most 200 characters, that makes a small everyday moment strange and new. An AI judge compares the sentences in private pairs and the most surprising one wins.
+One sentence, at most 200 characters, that makes a small everyday moment strange and new. An AI judge compares the sentences in pairs and the most surprising one wins. This re-entry trades the elevator for a doorway: a spider's overnight web becomes architecture a person has to duck under on the way to coffee.
 
 ## Run it
 
